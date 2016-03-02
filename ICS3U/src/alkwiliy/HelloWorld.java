@@ -9,6 +9,6 @@ public class HelloWorld {
 
 	public static void main(String[] args){
 	//This prints hello world to the console
-			System.out.println("Hello World");
+			System.out.println("Hello World! My name is Faisal Al-kwiliy");
 	}
 }
