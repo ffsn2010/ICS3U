@@ -3,10 +3,11 @@ package alkwiliy;
  * QuadraticEquation.java
  * The program displays the two x values in a quadratic equation using the quadratic formula.                                                                                                                                                                     
  * Faisal Al-kwiliy
- * Thursday, March 10, 2016
+ * Monday, March 21, 2016
  **/
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class QuadraticEquation {
 	/**
@@ -22,6 +23,8 @@ public class QuadraticEquation {
 		int c;
 		double x1;
 		double x2;
+		
+		DecimalFormat df = new DecimalFormat ("0.00");
 
 		//*** input
 		System.out.println("ax2+bx+c=0");
@@ -40,9 +43,9 @@ public class QuadraticEquation {
 		if ((Math.pow(b,2)- 4 * a * c<0)){
 			System.out.println("There are zero possible roots");
 		} else if ((Math.pow(b,2)- 4 * a * c>0)){
-			System.out.println("Theare are two x values, and they are: " + x1 + " and " + x2);
+			System.out.println("Theare are two roots, and they are: " + df.format (x1) + " and " + df.format (x2));
 		} else {
-			System.out.println("There is only 1 x value, and it is: " + x1);
+			System.out.println("There is only 1 root, and it is: " +  df.format (x1));
 		}
 	}
 
