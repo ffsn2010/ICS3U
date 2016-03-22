@@ -4,7 +4,7 @@ package alkwiliy;
  * The program displays the age your mother was when you were born.
  * Faisal Al-kwiliy
  * Tuesday, March 8, 2016
- */
+ **/
 import java.util.Scanner;
 
 public class MothersAge {
@@ -12,7 +12,8 @@ public class MothersAge {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner myInput = new Scanner(System.in);
-
+		
+		//*** variables
 		int motherAge; // user's mother's age
 		int kidAge; //user's child's age
 		int motherYoungAge; //user's mother's age when child is born
