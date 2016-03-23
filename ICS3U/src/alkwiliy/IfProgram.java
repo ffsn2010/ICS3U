@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class IfProgram {
 
 	/**
-	 * This is where the quadratic equation program starts.
+	 * This is where the IF program starts.
 	 * @param args
 	 */
 	public static void main(String[] args) {
