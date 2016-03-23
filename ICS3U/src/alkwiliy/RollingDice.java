@@ -1,7 +1,7 @@
 package alkwiliy;
 /**
  * RollingDice.java
- * The program stimulates rolling two dice at random and announcing who won between the computer and the user, or say it was a tie.                                                                                                                                                                     
+ * The program stimulates rolling two dice at random for the user, and then for the computer, and announcing who won between the computer and the user, or say it was a tie.                                                                                                                                                                     
  * Faisal Al-kwiliy
  *Wednesday, March 23, 2016
  **/
@@ -17,21 +17,30 @@ public class RollingDice {
 		 */
 
 		//*** variables
-		int UserDie;
-		int ComputerDie;
+		int UserDie1;
+		int UserDie2;
+		int ComputerDie1;
+		int ComputerDie2;
+		int UserTotalRoll;
+		int ComputerTotalRoll;
 		
 		//*** processing
-		UserDie= (int)(Math.random()*6)+1;
-		ComputerDie= (int)(Math.random()*6)+1;
+		UserDie1= (int)(Math.random()*6)+1;
+		UserDie2= (int)(Math.random()*6)+1;
+		ComputerDie1= (int)(Math.random()*6)+1;
+		ComputerDie2= (int)(Math.random()*6)+1;
+		
+		UserTotalRoll = UserDie1 + UserDie2;
+		ComputerTotalRoll = ComputerDie1 + ComputerDie2;
 
-		System.out.println("User's roll: " + UserDie);
-		System.out.println("Computer's roll: " + ComputerDie);
+		System.out.println("User's roll: " + UserTotalRoll);
+		System.out.println("Computer's roll: " + ComputerTotalRoll);
 		
 		//*** output
-		if (UserDie>ComputerDie){
+		if (UserTotalRoll>ComputerTotalRoll){
 			System.out.println("Congratulations, the user won");
 		}
-		else if (UserDie<ComputerDie){
+		else if (UserTotalRoll<ComputerTotalRoll){
 			System.out.println("Sorry, the computer won");
 		}
 		else {
