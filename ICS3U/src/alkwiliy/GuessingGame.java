@@ -11,7 +11,10 @@ import java.util.Scanner;
 public class GuessingGame {
 
 	public static void main(String[] args) {
-
+		/**
+		 * This is where the Guessing Game program starts.
+		 * @param args
+		 */
 		Scanner scan = new Scanner (System.in);
 
 		// Arrays
@@ -19,42 +22,41 @@ public class GuessingGame {
 		boolean[] animal = new boolean [20];
 		// Variables
 		String yesNo;
-		int counter = 0;
-		
+
+		int i=0;
+
 		// input
 		System.out.println("You want to play a guessing game? Think of an animal (Y/N)");
 		yesNo = scan.nextLine();
-		
+
 		// output
-		while(yesNo.equalsIgnoreCase("Y")){
 		if (yesNo.equalsIgnoreCase("Y")){
-			for (int i=20; i!=-1; i--){
-				counter++;
-				int computerGuess = (int)(Math.random()*i);
+			do{
+
+				int computerGuess = (int)(Math.random()*animals.length);
 				if (!animal[computerGuess]){
+					animal[computerGuess]=true;
 					System.out.println("Is it a " +animals[computerGuess]+ " ? (Y/N)");
 					yesNo = scan.nextLine();
+					i++;
 
 					if (yesNo.equalsIgnoreCase("Y"))
 					{
-						System.out.println("I win in " + counter + " guesses!");
-						i=0;
+						System.out.println("I win in " + i + " guesses!");
+
 					}
-					else if (counter==20)
-						System.out.println("U ran out of your 20 guesses.");
+					else if (animals.length==i)
+						System.out.println("You ran out of your 20 guesses.");
 					{
 						animal[computerGuess]=true;
 					}
 				}
-			}
-		}
-		else 
-		{
+
+			} while(yesNo.equalsIgnoreCase("N"));
+
 
 		}
-		System.out.println("Play again? (Y/N)");
-		yesNo = scan.nextLine();
-		}
+
 
 	}
 }
