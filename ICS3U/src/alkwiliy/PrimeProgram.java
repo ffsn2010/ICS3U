@@ -17,7 +17,7 @@ public class PrimeProgram {
 	 */
 	public static void main(String[] args) {
 		Scanner scan =  new Scanner (System.in);
-		
+
 		// Variables
 		int x;
 
@@ -26,13 +26,13 @@ public class PrimeProgram {
 		System.out.println("Please enter a number");
 
 		x = Integer.parseInt(scan.nextLine());
-		
+
 		// Processing
 		if (isPrime(x))
-		System.out.println(x + " is a prime number");
+			System.out.println(x + " is a prime number");
 		else
 			System.out.println(x + " is not a prime number");
-		
+
 	}
 
 
@@ -44,8 +44,8 @@ public class PrimeProgram {
 
 	private static boolean isPrime(int x) {
 		for (int i = 2; i < x; i++){
-		if (isDivisible(x, i))
-			return false;
+			if (isDivisible(x, i))
+				return false;
 
 		}
 		return true;	
